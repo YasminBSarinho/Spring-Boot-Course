@@ -1,16 +1,24 @@
 package com.yasminsarinho.produtosApi.model;
 
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "Produto")
 public class Produto {
 
-    //POJO (Plain Old Java Object)
+    //POJO --> (Plain Old Java Object)
 
     @Id
+    @Column(name = "id")
     private String id;
 
+    @Column(name = "nome")
     private String nome;
+
+    @Column(name = "descricao")
     private String descricao;
+
+    @Column(name = "preco")
     private double preco;
 
     public String getId() {
